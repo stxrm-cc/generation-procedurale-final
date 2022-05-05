@@ -596,7 +596,7 @@ def generateSky(height,width,world):
 
         # permet d'avoir des montagnes(i/10) ou des pleines (i/100)
         # en fonction du diviseur
-        shape = i/100
+        shape = i/10
 
         y = 0
         y += (-abs(random_sky) *math.cos(shape * random_sky))
