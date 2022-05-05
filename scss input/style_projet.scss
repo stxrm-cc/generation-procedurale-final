@@ -1,0 +1,272 @@
+/* Valeurs sont en VH (Viewport Height) pour assurer le bon fonction sur toute resolution */
+
+
+/* Importation/definition de la police qu'on utilisera pour l'entete */
+
+@font-face {
+    font-family: StayPixel;
+    src: url("../fonts/StayPixel.ttf");
+}
+
+@font-face {
+    font-family: ANDYB;
+    src: url("../fonts/ANDYB.TTF");
+}
+
+
+/* Proprietes qui vont s'appliquer a la page entiere */
+
+* {
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
+}
+
+
+/* Partie "corps" du site et ses proprietes */
+
+body {
+    /* Partie qui prepare l'animation pour la transition "fadeIn" qui fait apparaitre la page */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-image: url("../img/bg.jpg");
+    margin: 0px !important; /* enleve le margin de 8px par defaut par le user stylesheet agent */
+}
+
+
+/* Empeche le selectionnement de texte pour ne pas gacher l'"esthetique" */
+
+.disable-select {
+    user-select: none;
+    /* supported by Chrome and Opera */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+}
+
+
+/* container du menu*/
+
+#menu{
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  /* Set the navbar to fixed position */
+  z-index: 9999999;
+}
+
+
+/* partie entete/menu */
+
+.top-menu {
+    /* Position the navbar at the top of the page */
+    width: 100vw;
+    height: 2.2vw;
+    background-color: black;
+    display: inline-block;
+}
+
+
+/* partie texte du menu */
+
+.top-menu-text {
+    margin-left: 1%;
+    margin-top: 0.2%;
+    font-family: StayPixel;
+    font-size: 1.47vw;
+    cursor: default;
+}
+
+
+/* style du texte du menu */
+
+.top-menu-text>#accueil,
+#projet,
+#python,
+#scss,
+#opt {
+    color: #d6ffe4;
+    cursor: pointer !important;
+    &:hover {
+        // opacity: 60%;
+        color: #268f49;
+    }
+}
+
+
+/* specification pour le style du curseur et couleur */
+
+#ignore {
+    color: black !important;
+    opacity: 0;
+    cursor: default !important;
+}
+
+
+/****** Partie container de la presentation du sujet ******/
+
+$container-width: 103.52187833511206vh; //declaration de variable avec SCSS, 970px en vh
+
+/* Partie top du conteneur de texte*/
+
+.grass_top {
+    position: relative;
+    background: url("../img/grass1.png");
+    height: 13px;
+    width: $container-width;
+}
+
+
+/* Partie titre du conteneur de texte*/
+
+.grass_title {
+    position: relative;
+    background: url("../img/title1.jpg");
+    height: 44px;
+    width: $container-width;
+}
+
+
+/* Partie interieure du conteneur de texte*/
+
+.grass_brown {
+    position: relative;
+    background: url("../img/brown1.jpg");
+    height: 400px;
+    width: $container-width;
+}
+
+
+/* Partie bottom du conteneur de texte*/
+
+.grass_bottom {
+    position: relative;
+    height: 1.7075773745997866vh;
+    width: $container-width;
+    margin-bottom: 4%;
+}
+
+.panel_grass {
+    width: $container-width;
+    margin-left: 4%;
+    z-index: 2;
+    margin-top: 3%;
+    box-sizing: border-box;
+}
+
+
+/****** Fin de la partie container presentation du sujet ******/
+
+
+/****** Partie interpreteur python ******/
+
+$container-width1: 93.5vw;
+
+.interpreteur_top {
+    margin-top: 5%;
+    margin-left: 2.3%;
+    width: $container-width1;
+    height: 1.875vw;
+}
+
+.interpreteur_title {
+    width: $container-width1;
+    height: 6.484375vw;
+    margin-left: 2.3%;
+}
+
+.interpreteur_brown {
+    width: $container-width1;
+    height: 64vw;
+    margin-left: 2.3%;
+}
+
+.interpreteur_bottom {
+  background: url("../img/bottom1.png");
+    width: $container-width1;
+    height: 100%;
+    margin-left: 2.3%;
+}
+
+.interpreteur_titre {
+    color: #d6ffe4;
+    margin-left: 2%;
+    font-family: StayPixel;
+    font-size: 3.8vw;
+}
+
+.interpreteur_titre>span {
+    font-size: 2vw !important;
+    color: #d6ffe460;
+}
+
+#interpreteur_separator {
+    background: url('../img/separator1.png');
+    width: 100%;
+    height: 100%;
+}
+
+.interpreteur_info {
+    color: #d6ffe4;
+    margin-left: 2%;
+    margin-right: 1.5%;
+    margin-top: 1%;
+    font-size: 1.25vw;
+}
+
+#interpreteur {
+    position: relative;
+    width: 95%;
+    height: 25vw;
+    margin-top: 2%;
+    margin-left: 2.5%;
+    border-radius: 0.5vh;
+    border-color: #268f49;
+}
+
+#ref {
+    color: #268f49;
+    &:hover {
+        color: #39df70;
+        cursor: pointer;
+    }
+}
+
+
+/****** Fin partie interpreteur python ******/
+
+
+/****** PARTIE SCROLLBAR ******/
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 1vh;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.5336179295624333vh grey;
+    border-radius: 0.5vh;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: rgba(90, 88, 86, 0.767);
+    border-radius: 0.5vh;
+}
+
+
+/****** FIN PARTIE SCROLLBAR ******/
