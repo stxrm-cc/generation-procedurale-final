@@ -4,10 +4,10 @@ let index = 0;
 const imgElement = document.querySelector('#accueil_img');
 
 function change() {
-   imgElement.src = images[index];
-   index > 1 ? index = 0 : index++;
+    imgElement.src = images[index];
+    index > 1 ? index = 0 : index++;
 }
 
-window.onload = function () {
+window.onload = () => {
     setInterval(change, 3000);
 };

@@ -31,7 +31,10 @@ body {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     background-image: url("../img/bg.jpg");
-    margin: 0px !important; /* enleve le margin de 8px par defaut par le user stylesheet agent */
+    margin: 0px !important;
+    /* enleve le margin de 8px par defaut par le user stylesheet agent */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -53,13 +56,13 @@ body {
 
 /* container du menu*/
 
-#menu{
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  position: fixed;
-  /* Set the navbar to fixed position */
-  z-index: 9999999;
+#menu {
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    z-index: 9999999;
 }
 
 
@@ -83,7 +86,6 @@ body {
     font-size: 1.47vw;
     cursor: default;
 }
-
 
 
 /* style du texte du menu */
@@ -117,11 +119,16 @@ $container-width: 103.52187833511206vh; //declaration de variable avec SCSS, 970
 
 /* Partie top du conteneur de texte*/
 
+
+/* Partie top du conteneur de texte*/
+
 .grass_top {
     position: relative;
     background: url("../img/grass1.png");
-    height: 13px;
+    height: 0.71640625vw;
     width: $container-width;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 
@@ -130,8 +137,10 @@ $container-width: 103.52187833511206vh; //declaration de variable avec SCSS, 970
 .grass_title {
     position: relative;
     background: url("../img/title1.jpg");
-    height: 44px;
+    height: 2.428125vw;
     width: $container-width;
+    background-size: 100%;
+    margin-top: -0.62%;
 }
 
 
@@ -140,8 +149,9 @@ $container-width: 103.52187833511206vh; //declaration de variable avec SCSS, 970
 .grass_brown {
     position: relative;
     background: url("../img/brown1.jpg");
-    height: 400px;
+    height: 22vw;
     width: $container-width;
+    background-size: 100%;
 }
 
 
@@ -150,9 +160,10 @@ $container-width: 103.52187833511206vh; //declaration de variable avec SCSS, 970
 .grass_bottom {
     position: relative;
     background: url("../img/bottom1.png");
-    height: 1.7075773745997866vh;
+    height: 0.8828125vw;
     width: $container-width;
-    margin-bottom: 4%;
+    background-size: 100%;
+    margin-bottom: 5%;
 }
 
 
@@ -161,10 +172,10 @@ $container-width: 103.52187833511206vh; //declaration de variable avec SCSS, 970
 
 /****** Partie container de l'objet du sujet ******/
 
+
 /****** Partie container de l'objet du sujet ******/
 
 $container-width1: 93.5vw;
-
 .optimisation_top {
     margin-top: 5%;
     margin-left: 2.3%;
@@ -186,7 +197,7 @@ $container-width1: 93.5vw;
 
 .optimisation_bottom {
     width: $container-width1;
-    height: 100%;
+    background-size: 100%;
     margin-left: 2.3%;
 }
 
